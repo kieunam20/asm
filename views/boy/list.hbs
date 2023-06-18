@@ -1,0 +1,29 @@
+
+
+<div class="container text-center">
+   <h1 class="text text-primary">Toy Store</h1>
+   <div class="card-group">
+      <div class="row">
+         {{#each boys }}
+         <div class="card col-md-4 mb-4">
+            
+            <img class="card-img-top mt-3" src="{{ image }}" width="300" height="300">
+            
+            <div class="card-body">
+               <h4 class="card-title text-success">{{ product }}</h4>
+               <p class="fw-bold card-text text-erorr">Price : {{ price }} $</p>
+               <p class="fw-bold card-text text-success">Quantity : {{ quantity }}</p>
+               <p class="fw-bold card-text text-info">Color: {{ color }}</p>
+               <p class="fw-bold card-text text-primary"><i class="bi bi-star-fill">Rating {{ rating }}☆ </i></p>
+               <form action="/boy/detail" method="post">
+                 <input type="hidden" name="id" value="{{_id}}">
+                 <input type="submit" class="btn btn-success" value="Detail"/>
+               </form>
+            </div>
+         </div>
+         {{/each}}
+      </div>
+   </div>
+</div>
+
+ <a class="btn btn-primary" href="/boy"> Administration </a>

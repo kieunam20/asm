@@ -1,0 +1,32 @@
+<div class="container text-center mt-3 mb-3 col-md-8">
+   <form class="card bg-light ml-3 mr-3" action="/boy/edit/{{boy._id}}" method="post">
+      <h1 class="text text-primary mt-2 mb-2">Edit toy</h1>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for="">Boy Toy Prodcut</label>
+         <input class="form-control" type="text" name="product" value="{{ boy.product}}" required>
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for=""> Price </label>
+         <input class="form-control" type="text" name="price" value="{{boy.price }}"  required>
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for=""> Color </label>
+         <input class="form-control" type="text" name="color" value="{{boy.color }}" required>
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for="">Quantity</label>
+         <input class="form-control" type="number" name="quantity" value="{{ boy.quantity}}" required min="0" max="1000">
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for="">Toy image</label>
+         <input class="form-control" type="text" name="image" value="{{ boy.image}}" required>
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for="">Rating</label>
+         <input class="form-control" type="number" name="rating" value="{{ boy.rating}}" required min="0" max="5">
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <input class="btn btn-danger" type="submit" value="Edit">
+      </div>
+</form>
+</div>
