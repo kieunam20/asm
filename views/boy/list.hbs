@@ -1,20 +1,20 @@
 
 
 <div class="container text-center">
-   <h1 class="text text-primary">Toy Store</h1>
-   <div class="card-group">
-      <div class="row">
+   <h1 class="text text-danger"> ATN Toy Store</h1>
+   
+      <div class=" row row-cols-1 row-cols-md-6 g-4 mt-5">
          {{#each boys }}
-         <div class="card col-md-4 mb-4">
+         <div class="card row">
             
-            <img class="card-img-top mt-3" src="{{ image }}" width="300" height="300">
+            <img class="card-img-top " src="{{ image }}" width="auto" height="auto" >
             
             <div class="card-body">
                <h4 class="card-title text-success">{{ product }}</h4>
                <p class="fw-bold card-text text-erorr">Price : {{ price }} $</p>
                <p class="fw-bold card-text text-success">Quantity : {{ quantity }}</p>
                <p class="fw-bold card-text text-info">Color: {{ color }}</p>
-               <p class="fw-bold card-text text-primary"><i class="bi bi-star-fill">Rating {{ rating }}☆ </i></p>
+               <p class="fw-bold card-text text-primary">Rating {{ rating }}☆ </i></p>
                <form action="/boy/detail" method="post">
                  <input type="hidden" name="id" value="{{_id}}">
                  <input type="submit" class="btn btn-success" value="Detail"/>
@@ -23,7 +23,7 @@
          </div>
          {{/each}}
       </div>
-   </div>
+   
 </div>
 
  <a class="btn btn-primary" href="/boy"> Administration </a>

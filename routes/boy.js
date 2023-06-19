@@ -65,11 +65,11 @@ router.post("/edit/:id", (req, res) => {
 
 //search 
 router.post('/search', async (req, res) => {
-   var keyword = req.body.title;
-   var boys = await BoyModel.find({ title: new RegExp(keyword, "i")})
+   var keyword = req.body.name;
+   var boys = await BoyModel.find({ product: new RegExp(keyword, "i")})
    res.render('boy/list', { boys: boys })
 })
-
+/*
 //sort 
 router.get('/sort/asc', async (req, res) => {
    var boys = await BoyModel.find().sort({ title: 1 })
@@ -80,5 +80,5 @@ router.get('/sort/desc', async (req, res) => {
    var boys = await BoyModel.find().sort({ title: -1 })
    res.render('boy/list', { boys: boys })
 })
-
+*/
 module.exports = router;
