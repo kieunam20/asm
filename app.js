@@ -8,7 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 //router (1)
 var boyRouter = require('./routes/boy');
-
+var girlRouter = require('./routes/girl');
 var app = express();
 
 //mongoose
@@ -36,6 +36,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 //router (2)
 app.use('/boy', boyRouter);
+app.use('/girl', girlRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

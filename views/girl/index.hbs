@@ -23,26 +23,25 @@
 </nav>
 <table class="table bordered">
    <tr>
-      <th class="h2 text text-warning" colspan="6">Toy Boy LIST</th>
+      <th class="h2 text text-warning" colspan="6">Toy Girl LIST</th>
       <th>
-         <a class="btn btn-primary" href="/boy/add">Add Toy Boy</a>
+         <a class="btn btn-primary" href="/girl/add">Add Toy Girl</a>
       </th>
    </tr>
    <tr>
       <th>  Product  </th>
       <th> Quantity  </th>
-      <th> Color </th>
+      <th> brand </th>
       <th> Price </th>
       <th> Image </th>
-      <th> Rating </th>
       <th> Actions </th>
    </tr>
   
-   {{#each boys }}
+   {{#each girls }}
    <tr>
       <th>{{ product }}</th>
       <th>{{ quantity }}</th>
-      <th>{{ color }}</th>
+      <th>{{ brand }}</th>
       <th>{{ price }} $</th>
       <th>
         
@@ -50,13 +49,13 @@
                   width="250" height="250">
                 
       </th>
-      <th> <i class="bi bi-star-fill"> {{ rating }} ☆</i>  </th>
+     
      
      
       <th>
-         <a class="btn btn-warning" href="/boy/edit/{{_id}}">Edit</a>
-         <a class="btn btn-danger" href="/boy/delete/{{_id}}"
-         onclick="return confirm('Do you want to delete this boy toy ?');"
+         <a class="btn btn-warning" href="/girl/edit/{{_id}}">Edit</a>
+         <a class="btn btn-danger" href="/girl/delete/{{_id}}"
+         onclick="return confirm('Do you want to delete this girl toy ?');"
          >Delete</a>
       </th>
    </tr>

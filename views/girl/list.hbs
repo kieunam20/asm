@@ -22,7 +22,7 @@
     
    
   
-<form action="/boy/search" method="post">
+<form action="/girl/search" method="post">
                  <input type="text" name="name" placeholder="Search by name product">
                 <input type="submit" value="Search">
             </form>
@@ -32,9 +32,9 @@
 
 <div class="container text-center">
    <h1 class="text text-danger"> ATN Toy Store</h1>
-   
+ 
       <div class=" row row-cols-1 row-cols-md-6 g-4 mt-5">
-         {{#each boys }}
+         {{#each girls }}
          <div class="card row">
             
             <img class="card-img-top " src="{{ image }}" width="auto" height="auto" >
@@ -43,9 +43,9 @@
                <h4 class="card-title text-success">{{ product }}</h4>
                <p class="fw-bold card-text text-erorr">Price : {{ price }} $</p>
                <p class="fw-bold card-text text-success">Quantity : {{ quantity }}</p>
-               <p class="fw-bold card-text text-info">Color: {{ color }}</p>
-               <p class="fw-bold card-text text-primary">Rating {{ rating }}☆ </i></p>
-               <form action="/boy/detail" method="post">
+               <p class="fw-bold card-text text-info">Brand: {{ brand }}</p>
+              
+               <form action="/girl/detail" method="post">
                  <input type="hidden" name="id" value="{{_id}}">
                  <input type="submit" class="btn btn-success" value="Detail"/>
                </form>
@@ -56,4 +56,4 @@
    
 </div>
 
- <a class="btn btn-primary" href="/boy"> Administration </a>
+ <a class="btn btn-primary" href="/girl"> Administration </a>
